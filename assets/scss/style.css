@@ -8,13 +8,14 @@
   color: white;
   text-transform: uppercase;
   font-family: "Kanit", sans-serif;
+  overflow-y: hidden;
 }
 
 header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 10vh;
+  padding-top: 1rem;
 }
 header nav div {
   display: flex;
@@ -23,17 +24,29 @@ header nav div {
 header nav div li {
   margin: 0 1rem;
 }
-header h1,
-header h2 {
+header div {
+  margin: 1rem;
+}
+header div h1,
+header div h2 {
   font-weight: bolder;
   text-align: center;
   font-size: 8vh;
   letter-spacing: 0;
 }
-header h2 {
+header div h2 {
   color: black;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: white;
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+section img {
+  width: 100%;
+  height: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
