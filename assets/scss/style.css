@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  font-family: "Kanit", sans-serif;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+}
+header nav div {
+  display: flex;
+  align-items: center;
+}
+header nav div li {
+  margin: 0 1rem;
+}
+header h1,
+header h2 {
+  font-weight: bolder;
+  text-align: center;
+  font-size: 8vh;
+  letter-spacing: 0;
+}
+header h2 {
+  color: black;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+}
+
+/*# sourceMappingURL=style.css.map */
