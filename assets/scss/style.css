@@ -72,7 +72,7 @@ section div {
 }
 section div:first-child {
   background-image: url("../img/1.jpeg");
-  animation: normal apparition-from-bottom-first 1.5s;
+  animation: forwards apparition-from-bottom-first 1.5s;
 }
 section div:nth-child(2) {
   background-image: url("../img/2.jpeg");

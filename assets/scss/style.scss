@@ -78,7 +78,7 @@ section {
 
 		&:first-child {
 			background-image: url("../img/1.jpeg");
-			animation: normal apparition-from-bottom-first 1.5s;
+			animation: forwards apparition-from-bottom-first 1.5s;
 		}
 
 		&:nth-child(2) {
