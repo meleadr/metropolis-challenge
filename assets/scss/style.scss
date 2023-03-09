@@ -90,26 +90,23 @@ div {
 
 section {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	grid-gap: 1rem;
+	grid-template-columns: auto auto auto;
+	gap: 1rem;
 
-	div {
-		background-size: cover;
-		background-position: center;
-		background-repeat: no-repeat;
+	img {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
 
 		&:first-child {
-			background-image: url("../img/1.jpeg");
 			animation: forwards apparition-from-bottom-first 1.5s;
 		}
 
 		&:nth-child(2) {
-			background-image: url("../img/2.jpeg");
 			animation: forwards apparition-from-bottom-second 1.5s;
 		}
 
 		&:nth-child(3) {
-			background-image: url("../img/3.jpeg");
 			animation: forwards apparition-from-bottom-third 1.5s;
 		}
 	}
