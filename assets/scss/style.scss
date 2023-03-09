@@ -57,7 +57,7 @@ nav {
 		}
 
 		a {
-			margin: 0 1rem;
+			margin: 0 0.7vw;
 			text-decoration: none;
 			color: white;
 			&:hover {
@@ -81,13 +81,17 @@ nav {
 }
 
 div {
-	margin: 1rem;
+	animation: forwards title-fade-in-bottom 1.5s;
+	margin-top: 0.5rem;
+	margin-bottom: 2rem;
 	h1,
 	h2 {
+		line-height: 1;
 		font-weight: bolder;
 		text-align: center;
-		font-size: 5vw;
+		font-size: 6vw;
 		letter-spacing: 0;
+		font-family: "kanit-bold", sans-serif;
 	}
 
 	h2 {
@@ -127,6 +131,17 @@ section {
 	}
 }
 
+@keyframes title-fade-in-bottom {
+	0% {
+		opacity: 0;
+		transform: translateY(100%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
 @keyframes apparition-from-bottom-first {
 	0% {
 		opacity: 0;
@@ -139,6 +154,10 @@ section {
 }
 
 @keyframes apparition-from-bottom-second {
+	0% {
+		opacity: 0;
+		transform: translateY(100%);
+	}
 	33% {
 		opacity: 0;
 		transform: translateY(100%);
@@ -150,6 +169,10 @@ section {
 }
 
 @keyframes apparition-from-bottom-third {
+	0% {
+		opacity: 0;
+		transform: translateY(100%);
+	}
 	66% {
 		opacity: 0;
 		transform: translateY(100%);
