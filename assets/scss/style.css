@@ -82,7 +82,7 @@ div h2 {
 }
 div h2 {
   color: black;
-  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-width: 0.2vw;
   -webkit-text-stroke-color: white;
 }
 
