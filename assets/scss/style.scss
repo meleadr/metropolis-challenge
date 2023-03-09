@@ -1,3 +1,15 @@
+@font-face {
+	font-family: "kanit-bold";
+	src: url("../fonts/kanit-bold.woff2") format("woff2"),
+		url("../fonts/kanit-bold.woff") format("woff");
+}
+
+@font-face {
+	font-family: "kanit-semi-bold";
+	src: url("../fonts/kanit-semi-bold.woff2") format("woff2"),
+		url("../fonts/kanit-semi-bold.woff") format("woff");
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -5,64 +17,74 @@
 	background-color: black;
 	color: white;
 	text-transform: uppercase;
-	font-family: "Kanit", sans-serif;
+	font-family: "kanit-semi-bold", sans-serif;
 }
 
-header {
-	height: 30vh;
-	nav {
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 1rem;
+	text-decoration: none;
+	list-style: none;
+
+	div {
 		display: flex;
-		justify-content: space-between;
 		align-items: center;
-		padding-top: 1rem;
-		text-decoration: none;
-		list-style: none;
 
-		div {
-			display: flex;
-			align-items: center;
+		&:first-child {
+			flex-basis: 45%;
+		}
 
-			&:first-child {
-				flex-basis: 45%;
-			}
+		&:nth-child(2) {
+			flex-basis: 10%;
+		}
 
-			&:nth-child(2) {
-				flex-basis: 10%;
-			}
+		&:nth-child(3) {
+			flex-basis: 45%;
+			justify-content: flex-end;
+		}
 
-			&:nth-child(3) {
-				flex-basis: 45%;
-				justify-content: flex-end;
-			}
-
-			li {
-				margin: 0 1rem;
-				a {
-					text-decoration: none;
-					color: white;
-					&:hover {
-						text-decoration: underline;
-					}
+		li {
+			margin: 0 1rem;
+			a {
+				text-decoration: none;
+				color: white;
+				&:hover {
+					text-decoration: underline;
 				}
 			}
 		}
 	}
 
-	div {
-		margin: 1rem;
-		h1,
-		h2 {
-			font-weight: bolder;
-			text-align: center;
-			font-size: 5vw;
-			letter-spacing: 0;
+	#logo {
+		text-align: center;
+		strong {
+			display: block;
+			font-size: 1rem;
+			font-weight: normal;
 		}
+		span {
+			display: block;
+			font-size: 0.75rem;
+		}
+	}
+}
 
-		h2 {
-			color: black;
-			-webkit-text-stroke-width: 1px;
-			-webkit-text-stroke-color: white;
-		}
+div {
+	margin: 1rem;
+	h1,
+	h2 {
+		font-weight: bolder;
+		text-align: center;
+		font-size: 5vw;
+		letter-spacing: 0;
+	}
+
+	h2 {
+		color: black;
+		-webkit-text-stroke-width: 1px;
+		-webkit-text-stroke-color: white;
 	}
 }
 
@@ -70,11 +92,11 @@ section {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	grid-gap: 1rem;
+
 	div {
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
-		height: 70vh;
 
 		&:first-child {
 			background-image: url("../img/1.jpeg");
