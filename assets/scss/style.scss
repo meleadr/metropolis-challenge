@@ -20,6 +20,17 @@
 	font-family: "kanit-semi-bold", sans-serif;
 }
 
+html,
+body {
+	height: 100vh;
+	overflow: hidden;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+}
+
 nav {
 	display: flex;
 	justify-content: space-between;
@@ -88,13 +99,19 @@ div {
 
 section {
 	display: grid;
-	grid-template-columns: auto auto auto;
+	grid-template-columns: repeat(3, 1fr);
 	gap: 1rem;
+	flex-grow: 1;
 
 	img {
 		height: 100%;
 		width: 100%;
 		object-fit: cover;
+
+		&:hover {
+			transform: scale(1.1);
+			transition: all 0.5s ease-in-out;
+		}
 
 		&:first-child {
 			animation: forwards apparition-from-bottom-first 1.5s;
